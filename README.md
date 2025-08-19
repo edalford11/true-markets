@@ -3,6 +3,17 @@
 ## Install Go
 If you haven't already, download and install the [Go Programming Language](https://go.dev/).
 
+## Configuration
+```shell
+cp config/config.default.yml config/config.yml
+```
+
+You may make any changes to the config in that new file, which is not commited to version control.
+Symbols can be added or removed in that config file or updated via env variable like so
+```shell
+export BINANCE_SYMBOLS=BTCUSDT,ETHUSDT
+```
+
 ## Local Development
 Run the API server locally with the following command:
 ```shell
