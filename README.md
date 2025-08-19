@@ -30,3 +30,7 @@ go test ./... -race
 curl -XGET 'http://localhost:8080/v1/prices'
 curl -XGET 'http://localhost:8080/v1/price?symbols=BTCUSDT,ETHUSDT'
 ```
+
+## Assumptions
+We will not be letting the user know if a symbol is not found when using the /price endpoint. It will just not be
+included in the response.
