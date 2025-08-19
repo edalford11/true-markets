@@ -13,3 +13,9 @@ go run cmd/main.go api
 ```shell
 go test ./... -race
 ```
+
+## Example curl commands
+```shell
+curl -XGET 'http://localhost:8080/v1/prices'
+curl -XGET 'http://localhost:8080/v1/price?symbols=BTCUSDT,ETHUSDT'
+```
