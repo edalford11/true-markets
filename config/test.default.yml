@@ -1,0 +1,11 @@
+environment: local
+
+logger:
+  level: debug
+
+server:
+  url: http://localhost
+  port: 8080
+  temp_dir: /tmp
+
+symbols: BTCUSDT, ETHUSDT
