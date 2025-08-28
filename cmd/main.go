@@ -103,10 +103,7 @@ func connectToBinance() chan struct{} {
 
 				errHandler := func(err error) {
 					log.Error().Err(err).Msg("Binance websocket error - triggering reconnect")
-					select {
-					case reconnectCh <- struct{}{}:
-					default:
-					}
+					reconnectCh <- struct{}{}
 				}
 
 				_, stopCh, err := websocketStreamClient.WsCombinedTradeServe(symbols, wsHandler, errHandler)
